@@ -30,12 +30,12 @@ namespace COMP003A.CodingAssignment3
 
                 if (userChoice == 4)
                 {
-                    Console.WriteLine("Goodbye!");
+                    Console.WriteLine("\nGoodbye!");
                     break;
                 }
                 else if (userChoice == 1)
                 {
-                    Console.WriteLine("Enter the expense name: ");
+                    Console.WriteLine("\nEnter the expense name: ");
                     expenseName = Console.ReadLine();
                     Console.WriteLine("Enter the expense amount: ");
                     expenseAmount = int.Parse(Console.ReadLine());
@@ -43,13 +43,14 @@ namespace COMP003A.CodingAssignment3
                 }
                 else if (userChoice == 2)
                 {
-                    Console.WriteLine($"Expenses: \n- {expenseName}: ${expenseAmount}");
+                    Console.WriteLine($"\nExpenses: \n- {expenseName}: ${expenseAmount}");
+                    Console.WriteLine($"Total expenses: ${expenseAmount}");
                     double remainingBudget = monthlyIncome - expenseAmount;
                     Console.WriteLine($"Remaining budget: ${remainingBudget}");
                 }
                 else if (userChoice == 3)
                 {
-                    Console.WriteLine("Enter the expense you want to remove: ");
+                    Console.WriteLine("\nEnter the expense you want to remove: ");
                     string expenseToRemove = Console.ReadLine();
                     if (expenseToRemove == expenseName)
                     {
